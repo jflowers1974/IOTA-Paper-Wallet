@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+
+    <div id="content">
+        <div id="images">
+            <canvas width="737px" height="270px" id="imageCanvas"></canvas>
+            <canvas hidden id="qr"></canvas>
+        </div>
+        <div id="controls">
+            <input id="seed" size="101" type="text" placeholder="ENTER SEED">
+            <div id="buttons">
+                <input id="generate" class="button" type="button" value="Generate" onclick="GenerateQR()">
+                <input id="print" class="button" type="button" value="Print Wallet" onclick="PrintWallet()">
+            </div>
+            <p id="validMessage"></p>
+        </div>
+    </div>
+
+    <div id="infoContainer">
+
+        <br>
+        <div class="tooltip"><span id="infoTip">Info</span>
+            <div class="tooltiptext">
+                <p>This website generates a paper wallet, ready for printing and storage.<br> All content on this site is locally hosted, and relies on only two dependencies:
+                    <a href="https://github.com/neocotic/qrious">qrious</a>, and <a href="https://github.com/iotaledger/iota.lib.js">iota.utils</a><br> This website can (and preferably should be) run offline from the internet.
+                </p>
+            </div>
+        </div>
+        <br>
+        <span id="donations">Buy me a beer! TGWKTZGRSWQYM9FMDNUPNVXYRXXEYUFNYKCQKPPTAAZDFYPN9YRTARYMCWZZGWSEARXSDIUWHVFFAOZVGNAKREFQSF</span>
+    </div>
+
+    <script src="js/qrious.min.js"></script>
+    <script src="js/iota.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

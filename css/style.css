@@ -1,0 +1,127 @@
+    @import url('../fonts/Roboto-Regular.ttf');
+    body {
+        font-family: 'Roboto', sans-serif;
+        background-color: #2a3d71;
+    }
+    
+    canvas {
+        border: 1px solid black;
+        background-color: #FFF;
+    }
+    
+    #validMessage {
+        color: #FFF;
+        font-size: 12px;
+        text-align: center;
+    }
+    
+    #content {
+        margin: auto;
+        width: 737px;
+        margin-top: 10%;
+    }
+    
+    .button {
+        background-color: #2a3d71;
+        /* Green */
+        border: 1px solid #FFF;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        cursor: pointer;
+        margin: 10px;
+    }
+    
+    #controls {
+        width: 100%;
+        margin: auto;
+    }
+    
+    #buttons {
+        text-align: center;
+        margin: auto;
+        width: 100%;
+    }
+    
+    #infoContainer {
+        color: #EEE;
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        font-size: 12px;
+    }
+    
+    #buttons>input {
+        display: inline;
+    }
+    
+    input[type='text'] {
+        height: 24px;
+        background-color: transparent;
+        border: 1px solid #FFF;
+        margin-top: 5px;
+        color: #FFF;
+    }
+    
+    a {
+        color: #fff;
+    }
+    
+    @media print {
+        input {
+            display: none!important;
+        }
+        span {
+            display: none!important;
+        }
+        p {
+            display: none!important;
+        }
+        a {
+            display: none!important;
+        }
+    }
+    /* Tooltip container */
+    
+    .tooltip {
+        position: relative;
+        display: inline-block;
+        width: 500px;
+        font-size: 16px;
+        /* If you want dots under the hoverable text */
+    }
+    /* Tooltip text */
+    
+    .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 100%;
+        bottom: 100%;
+        left: 80px;
+        margin-left: -60px;
+        /* Use half of the width (120/2 = 60), to center the tooltip */
+        background-color: #425a9c;
+        color: #fff;
+        text-align: center;
+        padding: 5px 0;
+        border-radius: 6px;
+        /* Position the tooltip text - see examples below! */
+        position: absolute;
+        z-index: 1;
+    }
+    /* Show the tooltip text when you mouse over the tooltip container */
+    
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+    }
+    
+    #donations {
+        font-size: 12px;
+    }
+    
+    #infoTip {
+        font-style: bold;
+        cursor: pointer;
+    }
