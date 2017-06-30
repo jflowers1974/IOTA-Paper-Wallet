@@ -3,6 +3,8 @@
 
 <head>
     <link href="css/style.css" rel="stylesheet">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
@@ -26,19 +28,18 @@
     <div id="infoContainer">
 
         <br>
-        <div class="tooltip"><span id="infoTip">Info</span>
+        <div class="tooltip"><span id="infoTip"><img src="img/info.png"></span>
             <div class="tooltiptext">
-                <p>This website generates a paper wallet, ready for printing and storage.<br> All content on this site is locally hosted, and relies on only two dependencies:
-                    <a href="https://github.com/neocotic/qrious">qrious</a>, and <a href="https://github.com/iotaledger/iota.lib.js">iota.utils</a><br> This website can (and preferably should be) run offline from the internet.
+                <p>This website generates a paper wallet, ready for printing and storage.<br> All content on this site is locally hosted, and relies on only one dependency:
+                    <a href="https://github.com/neocotic/qrious">qrious</a> for QR code generation.<br> This website can (and preferably should be) run offline from the internet.
                 </p>
+                <span id="donations">Buy me a beer! TGWKTZGRSWQYM9FMDNUPNVXYRXXEYUFNYKCQKPPTAAZDFYPN9YRTARYMCWZZGWSEARXSDIUWHVFFAOZVGNAKREFQSF</span>
+
             </div>
         </div>
-        <br>
-        <span id="donations">Buy me a beer! TGWKTZGRSWQYM9FMDNUPNVXYRXXEYUFNYKCQKPPTAAZDFYPN9YRTARYMCWZZGWSEARXSDIUWHVFFAOZVGNAKREFQSF</span>
     </div>
 
     <script src="js/qrious.min.js"></script>
-    <script src="js/iota.min.js"></script>
     <script src="js/main.js"></script>
 
 </body>

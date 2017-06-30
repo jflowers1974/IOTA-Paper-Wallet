@@ -67,7 +67,7 @@
             val = false;
         }
         if (seed.length < 81 && seed != "") {
-            msg = "This seed is less than 81 characters. For maximum security, use 81 characters";
+            msg = "This seed is less than 81 characters. For maximum security, use 81 characters.";
             document.getElementById('validMessage').innerHTML = msg;
         }
         return val;
