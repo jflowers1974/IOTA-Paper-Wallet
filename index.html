@@ -5,6 +5,10 @@
     <link href="css/style.css" rel="stylesheet">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+    <script src="js/qrious.min.js"></script>
+    <script src="js/iota.js"></script>
+    <script src="js/main.js"></script>
 </head>
 
 <body>
@@ -12,14 +16,15 @@
 
     <div id="content">
         <div id="images">
-            <canvas width="737px" height="270px" id="imageCanvas"></canvas>
-            <canvas hidden id="qr"></canvas>
+            <canvas width="800px" height="270px" id="imageCanvas"></canvas>
+            <canvas hidden id="seedCanvas"></canvas>
+            <canvas hidden id="addressCanvas"></canvas>
         </div>
         <div id="controls">
-            <input id="seed" size="101" type="text" placeholder="ENTER SEED">
+            <input id="seed" size="106" type="text" placeholder="ENTER SEED">
             <div id="buttons">
-                <input id="generate" class="button" type="button" value="Generate" onclick="GenerateQR()">
-                <input id="print" class="button" type="button" value="Print Wallet" onclick="PrintWallet()">
+                <input id="generate" class="button" type="button" value="Generate">
+                <input id="print" class="button" type="button" value="Print Wallet">
             </div>
             <p id="validMessage"></p>
         </div>
@@ -30,17 +35,16 @@
         <br>
         <div class="tooltip"><span id="infoTip"><img src="img/info.png"></span>
             <div class="tooltiptext">
-                <p>This website generates a paper wallet, ready for printing and storage.<br> All content on this site is locally hosted, and relies on only one dependency:
-                    <a href="https://github.com/neocotic/qrious">qrious</a> for QR code generation.<br> This website can (and preferably should be) run offline from the internet.
+                <p>This website generates a paper wallet, ready for printing and storage.<br> All content on this site is locally hosted, and relies on only two dependencie:
+                    <a href="https://github.com/neocotic/qrious">qrious</a> for QR code generation, and <a href="https://github.com/iotaledger/iota.lib.js">iota.lib.js</a>
+                    <br> This website can (and preferably should be) run offline from the internet.
+                    <br> Whilst every effort has been made for the accuracy of this tool, I am in no way responsible for any damages or loss of funds should any errors exist.
                 </p>
                 <span id="donations">Buy me a beer! TGWKTZGRSWQYM9FMDNUPNVXYRXXEYUFNYKCQKPPTAAZDFYPN9YRTARYMCWZZGWSEARXSDIUWHVFFAOZVGNAKREFQSF</span>
 
             </div>
         </div>
     </div>
-
-    <script src="js/qrious.min.js"></script>
-    <script src="js/main.js"></script>
 
 </body>
 
