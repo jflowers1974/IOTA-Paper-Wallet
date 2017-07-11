@@ -1,6 +1,10 @@
-    @import url('../fonts/Roboto-Regular.ttf');
     html {
         height: 100%;
+    }
+    
+    @font-face {
+        font-family: 'Roboto';
+        src: url('../fonts/Roboto-Regular.ttf');
     }
     
     body {
@@ -20,9 +24,20 @@
         overflow-y: hidden;
     }
     
+    p,
+    li,
+    span,
+    input {
+        font-family: 'Roboto', sans-serif!important;
+        letter-spacing: 0.05em;
+    }
+    
     canvas {
         border: 1px solid black;
         background-color: #FFF;
+        width: 800px;
+        height: 270px;
+        font-family: 'Roboto'!important;
     }
     
     #validMessage {
@@ -33,7 +48,7 @@
     
     #content {
         margin: auto;
-        width: 737px;
+        width: 800px;
         margin-top: 10%;
         height: 100%;
     }
@@ -85,6 +100,11 @@
     
     a {
         color: #fff;
+    }
+    
+    #info {
+        width: 32px;
+        height: 32px;
     }
     
     @media print {

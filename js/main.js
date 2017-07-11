@@ -13,9 +13,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
     var address;
     var qr;
 
-    ctx.font = "14px Arial";
+    ctx.font = "bold 32px Roboto";
     ctx.textAlign = "center";
-    ctx.fillText("Enter a seed, and press Generate", 400, 150);
+    ctx.fillText("ENTER A SEED AND PRESS GENERATE", 800, 300);
 
     function GenerateQR() {
         seed = document.getElementById('seed').value;
@@ -30,7 +30,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
         options.checksum = true;
         options.total = 1;
         validAdd = DisplayValid(seed);
-        console.log(validAdd);
         if (validAdd) {
             iota.api.getNewAddress(seed, options, function(e, add) {
                 address = add;
@@ -38,9 +37,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
             });
         } else {
             ctx.clearRect(0, 0, imageCanvas.width, imageCanvas.height);
-            ctx.font = "14px Arial";
+            ctx.font = "bold 32px Roboto";
             ctx.textAlign = "center";
-            ctx.fillText(msg, 360, 150);
+            ctx.fillText(msg, 800, 300);
         }
     }
 
@@ -53,14 +52,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
             sQR = new QRious({
                 element: seedCanvas,
                 value: seed,
-                size: 150,
+                size: 300,
                 backgroundAlpha: 0
             });
 
             aQR = new QRious({
                 element: addressCanvas,
                 value: address[0],
-                size: 150,
+                size: 300,
                 backgroundAlpha: 0
             });
 
@@ -72,31 +71,31 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 ctx.globalAlpha = 0.8;
                 ctx.drawImage(bg, 0, 0, imageCanvas.width, imageCanvas.height);
                 ctx.restore();
-                ctx.drawImage(seedCanvas, 10, 30);
-                ctx.drawImage(addressCanvas, 640, 90);
+                ctx.drawImage(seedCanvas, 20, 60);
+                ctx.drawImage(addressCanvas, 1280, 180);
 
-                ctx.font = "bold 16px Roboto";
+                ctx.font = "bold 28px Roboto";
                 ctx.textAlign = "center";
-                ctx.fillText("PRIVATE SEED", 85, 200);
+                ctx.fillText("PRIVATE SEED", 170, 400);
 
-                ctx.font = "bold 12.3px Roboto";
+                ctx.font = "bold 24.6px Roboto";
                 ctx.textAlign = "left";
-                ctx.fillText(seed, 10, 20);
+                ctx.fillText(seed, 20, 40);
 
                 ctx.textAlign = "center";
-                ctx.font = "bold 14px Roboto";
-                ctx.fillText("RECEIVING ADDRESS", 715, 80);
+                ctx.font = "bold 28px Roboto";
+                ctx.fillText("RECEIVING ADDRESS", 1430, 160);
 
                 ctx.textAlign = "right";
-                ctx.font = "bold 12.3px Roboto";
-                ctx.fillText(address, 790, 260);
+                ctx.font = "bold 24.6px Roboto";
+                ctx.fillText(address, 1580, 520);
 
 
                 ctx.textAlign = "left";
                 ctx.save();
-                ctx.translate(780, 260);
+                ctx.translate(1560, 320);
                 ctx.rotate(3 * Math.PI / 2);
-                ctx.font = "bold 15.3px Roboto";
+                ctx.font = "bold 30.3px Roboto";
                 ctx.fillStyle = "#000000";
                 ctx.textAlign = "left";
                 //ctx.fillText("IOTA IOTA IOTA IOTA IOTA IOTA", 0, 0);
@@ -104,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
                 var img = new Image;
                 img.onload = function() {
-                    ctx.drawImage(img, 200, 57, 400, 150);
+                    ctx.drawImage(img, 400, 114, 800, 300);
                 };
                 img.src = "img/logo.png";
             };
@@ -118,7 +117,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         var val = true;
 
         if (seed == "" || seed.length > 81 || !seed.match(/^[A-Z9]*$/)) {
-            msg = "This is not a valid seed!";
+            msg = "THIS IS NOT A VALID SEED!";
             document.getElementById('validMessage').innerHTML = msg;
 
             val = false;

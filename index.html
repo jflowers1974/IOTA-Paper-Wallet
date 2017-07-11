@@ -9,6 +9,7 @@
     <script src="js/qrious.min.js"></script>
     <script src="js/iota.js"></script>
     <script src="js/main.js"></script>
+    <title>IOTA Paper Wallet</title>
 </head>
 
 <body>
@@ -16,7 +17,7 @@
 
     <div id="content">
         <div id="images">
-            <canvas width="800px" height="270px" id="imageCanvas"></canvas>
+            <canvas width="1600px" height="540px" id="imageCanvas"></canvas>
             <canvas hidden id="seedCanvas"></canvas>
             <canvas hidden id="addressCanvas"></canvas>
         </div>
@@ -33,7 +34,7 @@
     <div id="infoContainer">
 
         <br>
-        <div class="tooltip"><span id="infoTip"><img src="img/info.png"></span>
+        <div class="tooltip"><span id="infoTip"><img id="info" src="img/info.png"></span>
             <div class="tooltiptext">
                 <ul>
                     <li>This website generates a paper wallet, ready for printing and storage.</li>
