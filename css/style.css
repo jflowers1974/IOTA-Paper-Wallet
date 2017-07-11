@@ -1,7 +1,23 @@
     @import url('../fonts/Roboto-Regular.ttf');
+    html {
+        height: 100%;
+    }
+    
     body {
         font-family: 'Roboto', sans-serif;
-        background-color: #2a3d71;
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#258dc8+0,263bf2+100 */
+        background: #317185;
+        /* Old browsers */
+        background: -moz-linear-gradient(top, #317185 0%, #143A43 100%);
+        /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, #317185 0%, #143A43 100%);
+        /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, #317185 0%, #143A43 100%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#258dc8', endColorstr='#263bf2', GradientType=0);
+        /* IE6-9 */
+        min-height: 100%;
+        overflow-y: hidden;
     }
     
     canvas {
@@ -19,10 +35,11 @@
         margin: auto;
         width: 737px;
         margin-top: 10%;
+        height: 100%;
     }
     
     .button {
-        background-color: #2a3d71;
+        background-color: transparent;
         /* Green */
         border: 1px solid #FFF;
         color: white;
@@ -83,6 +100,9 @@
         a {
             display: none!important;
         }
+        @page {
+            size: landscape;
+        }
     }
     /* Tooltip container */
     
@@ -101,19 +121,26 @@
         left: 80px;
         margin-left: -60px;
         /* Use half of the width (120/2 = 60), to center the tooltip */
-        background-color: #425a9c;
         color: #fff;
-        text-align: center;
         padding: 5px 0;
         border-radius: 6px;
         /* Position the tooltip text - see examples below! */
         position: absolute;
         z-index: 1;
+        line-height: 18px;
+        font-size: 12px;
     }
-    /* Show the tooltip text when you mouse over the tooltip container */
     
     .tooltip:hover .tooltiptext {
         visibility: visible;
+    }
+    
+    ul {
+        list-style: circle;
+    }
+    
+    li {
+        margin-left: -20px;
     }
     
     #donations {
