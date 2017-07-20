@@ -76,6 +76,7 @@
         text-align: center;
         margin: auto;
         width: 100%;
+        margin-left: 8px;
     }
     
     #infoContainer {
