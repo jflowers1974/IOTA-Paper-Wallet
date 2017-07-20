@@ -1,3 +1,5 @@
+var visible = false;
+
 document.addEventListener("DOMContentLoaded", function(event) {
     var iota = new IOTA({
         // Host and provider are only needed if the user intends to generate the address deterministically
@@ -131,7 +133,17 @@ document.addEventListener("DOMContentLoaded", function(event) {
     function PrintWallet() {
         window.print();
     }
-
+    
     document.getElementById("generate").addEventListener("click", GenerateQR);
     document.getElementById("print").addEventListener("click", PrintWallet);
 });
+
+function expand(b)
+{
+   var style ="hidden";
+   if(b)
+      style = "visible";
+        
+  document.getElementById("tooltiptext").style.visibility = style;
+
+}
