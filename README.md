@@ -12,3 +12,6 @@ The archive of the site is now in the **out** folder<br>
 
 v1.1 Added landscape support and updated validation rules<br>
 v1.2 Added build support and a precompiled archive + graphics fixes<br>
+<br>
+
+Find me on IOTA slack @arancauchi or on reddit /u/mothermole1
