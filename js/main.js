@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     ctx.font = "bold 32px Roboto";
     ctx.textAlign = "center";
-    ctx.fillText("ENTER A SEED AND PRESS GENERATE", 800, 300);
+    ctx.fillText("ENTER A SEED AND PRESS GENERATE: 81 CHARACTERS IN LENGTH, CONTAINING ONLY: UPPERCASE [A-Z] AND 9", 800, 300);
 
     function GenerateQR() {
         seed = document.getElementById('seed').value;
